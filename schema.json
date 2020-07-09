@@ -1,0 +1,875 @@
+{
+  "securityDefinitions": {
+    "basic": {
+      "type": "basic"
+    }
+  },
+  "paths": {
+    "/api/temperate_phages/": {
+      "get": {
+        "tags": [
+          "temperate_phages"
+        ],
+        "summary": "Sequenced Temperate Phages",
+        "description": "Sequenced Temperate Phages
+
+Get detailed information about phages that have been sequenced and placed in a cluster which generally contains temperate phages.",
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "temperate_phages_list"
+      }
+    },
+    "/api/subclusters/{subcluster}/phagelist/": {
+      "get": {
+        "tags": [
+          "subclusters"
+        ],
+        "summary": "Phages by Subcluster",
+        "description": "Phages by Subcluster
+
+Get detailed information about all phages in a given subcluster.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "subcluster"
+          },
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "subclusters_phagelist_list"
+      }
+    },
+    "/api/subclusters/{subcluster}/": {
+      "get": {
+        "tags": [
+          "subclusters"
+        ],
+        "summary": "Subcluster Information",
+        "description": "Subcluster Information
+
+Get information on all or any subluster, including its set of phages.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "subcluster"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "subclusters_read"
+      }
+    },
+    "/api/subclusters/": {
+      "get": {
+        "tags": [
+          "subclusters"
+        ],
+        "summary": "Subcluster Information",
+        "description": "Subcluster Information
+
+Get information on all or any subluster, including its set of phages.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "subclusters_list"
+      }
+    },
+    "/api/sequenced_phages/": {
+      "get": {
+        "tags": [
+          "sequenced_phages"
+        ],
+        "summary": "Sequenced Phages Only",
+        "description": "Sequenced Phages Only
+
+Get detailed information about all sequenced phages.",
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "sequenced_phages_list"
+      }
+    },
+    "/api/schema/": {
+      "get": {
+        "tags": [
+          "schema"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "schema_list"
+      }
+    },
+    "/api/publications/{id}/": {
+      "get": {
+        "tags": [
+          "publications"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A unique integer value identifying this publication.",
+            "in": "path",
+            "required": true,
+            "name": "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "publications_read"
+      }
+    },
+    "/api/publications/": {
+      "get": {
+        "tags": [
+          "publications"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "publications_list"
+      }
+    },
+    "/api/pham_phages/{Name}/": {
+      "get": {
+        "tags": [
+          "pham_phages"
+        ],
+        "summary": "Phamerator Phage Information",
+        "description": "Phamerator Phage Information
+
+Get information on all or any phages found in Phamerator's Actino_Draft database, including their DNA sequence.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "Name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "pham_phages_read"
+      }
+    },
+    "/api/pham_phages/": {
+      "get": {
+        "tags": [
+          "pham_phages"
+        ],
+        "summary": "Phamerator Phage Information",
+        "description": "Phamerator Phage Information
+
+Get information on all or any phages found in Phamerator's Actino_Draft database, including their DNA sequence.",
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "pham_phages_list"
+      }
+    },
+    "/api/phages/{phage_name}/": {
+      "get": {
+        "tags": [
+          "phages"
+        ],
+        "summary": "Detailed Phage Information",
+        "description": "Detailed Phage Information
+
+Access detailed information about all phages, or about a particular phage (given its name).",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "phage_name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "phages_read"
+      }
+    },
+    "/api/phages/": {
+      "get": {
+        "tags": [
+          "phages"
+        ],
+        "summary": "Detailed Phage Information",
+        "description": "Detailed Phage Information
+
+Access detailed information about all phages, or about a particular phage (given its name).",
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "phages_list"
+      }
+    },
+    "/api/lytic_phages/": {
+      "get": {
+        "tags": [
+          "lytic_phages"
+        ],
+        "summary": "Sequenced Lytic Phages",
+        "description": "Sequenced Lytic Phages
+
+Get detailed information about phages that have been sequenced and placed in a cluster which generally contains lytic phages (those which cannot form lysogens).",
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "lytic_phages_list"
+      }
+    },
+    "/api/institutions/{institution_code}/": {
+      "get": {
+        "tags": [
+          "institutions"
+        ],
+        "summary": "Institution Information",
+        "description": "Institution Information
+
+Get basic information on all or any institutions.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "A unique value identifying this institution.",
+            "in": "path",
+            "required": true,
+            "name": "institution_code"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "institutions_read"
+      }
+    },
+    "/api/institutions/": {
+      "get": {
+        "tags": [
+          "institutions"
+        ],
+        "summary": "Institution Information",
+        "description": "Institution Information
+
+Get basic information on all or any institutions.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "institutions_list"
+      }
+    },
+    "/api/host_strains/{id}/phagelist/": {
+      "get": {
+        "tags": [
+          "host_strains"
+        ],
+        "summary": "Phages by Strain",
+        "description": "Phages by Strain
+
+Get detailed information about all phages in a given strain.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "id"
+          },
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "host_strains_phagelist_list"
+      }
+    },
+    "/api/host_strains/{id}/": {
+      "get": {
+        "tags": [
+          "host_strains"
+        ],
+        "summary": "Host Strain Information",
+        "description": "Host Strain Information
+
+Get information on all or any host strain.",
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A unique integer value identifying this Host strain.",
+            "in": "path",
+            "required": true,
+            "name": "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "host_strains_read"
+      }
+    },
+    "/api/host_strains/": {
+      "get": {
+        "tags": [
+          "host_strains"
+        ],
+        "summary": "Host Strain Information",
+        "description": "Host Strain Information
+
+Get information on all or any host strain.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "host_strains_list"
+      }
+    },
+    "/api/host_species/{id}/phagelist/": {
+      "get": {
+        "tags": [
+          "host_species"
+        ],
+        "summary": "Phages by Species",
+        "description": "Phages by Species
+
+Get detailed information about all phages in a given species.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "id"
+          },
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "host_species_phagelist_list"
+      }
+    },
+    "/api/host_species/{id}/": {
+      "get": {
+        "tags": [
+          "host_species"
+        ],
+        "summary": "Host Species Information",
+        "description": "Host Species Information
+
+Get information on all or any host species.",
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A unique integer value identifying this Host species.",
+            "in": "path",
+            "required": true,
+            "name": "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "host_species_read"
+      }
+    },
+    "/api/host_species/": {
+      "get": {
+        "tags": [
+          "host_species"
+        ],
+        "summary": "Host Species Information",
+        "description": "Host Species Information
+
+Get information on all or any host species.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "host_species_list"
+      }
+    },
+    "/api/host_genera/{id}/phagelist/": {
+      "get": {
+        "tags": [
+          "host_genera"
+        ],
+        "summary": "Phages by Genus",
+        "description": "Phages by Genus
+
+Get detailed information about all phages in a given genus.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "id"
+          },
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "host_genera_phagelist_list"
+      }
+    },
+    "/api/host_genera/{id}/": {
+      "get": {
+        "tags": [
+          "host_genera"
+        ],
+        "summary": "Host Genus Information",
+        "description": "Host Genus Information
+
+Get information on all or any host genus.",
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A unique integer value identifying this genus.",
+            "in": "path",
+            "required": true,
+            "name": "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "host_genera_read"
+      }
+    },
+    "/api/host_genera/": {
+      "get": {
+        "tags": [
+          "host_genera"
+        ],
+        "summary": "Host Genus Information",
+        "description": "Host Genus Information
+
+Get information on all or any host genus.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "host_genera_list"
+      }
+    },
+    "/api/genesbyphage/{name}/": {
+      "get": {
+        "tags": [
+          "genesbyphage"
+        ],
+        "summary": "Genes from one Phage",
+        "description": "Genes from one Phage
+
+Get all genes from a particular phage.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "name"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "genesbyphage_read"
+      }
+    },
+    "/api/genes/{GeneID}/": {
+      "get": {
+        "tags": [
+          "genes"
+        ],
+        "summary": "Phamerator Gene Information",
+        "description": "Phamerator Gene Information
+
+Get information on all or any genes found in Phamerator's Actino_Draft database.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "A unique value identifying this pham gene.",
+            "in": "path",
+            "required": true,
+            "name": "GeneID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "genes_read"
+      }
+    },
+    "/api/genes/": {
+      "get": {
+        "tags": [
+          "genes"
+        ],
+        "summary": "Phamerator Gene Information",
+        "description": "Phamerator Gene Information
+
+Get information on all or any genes found in Phamerator's Actino_Draft database.",
+        "parameters": [
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "genes_list"
+      }
+    },
+    "/api/genbankupdated/{year}/{month}/{day}/": {
+      "get": {
+        "tags": [
+          "genbankupdated"
+        ],
+        "summary": "Phages by Genbank File update date",
+        "description": "Phages by Genbank File update date
+
+Get detailed information about all phages whose QCed Genbank files have changed since a certain date",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "month"
+          },
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "day"
+          },
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "year"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "genbankupdated_read"
+      }
+    },
+    "/api/clusters/{cluster}/phagelist/": {
+      "get": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Phages by Cluster",
+        "description": "Phages by Cluster
+
+Get detailed information about all phages in a given cluster.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "cluster"
+          },
+          {
+            "type": "integer",
+            "description": "A page number within the paginated result set.",
+            "in": "query",
+            "required": false,
+            "name": "page"
+          },
+          {
+            "type": "integer",
+            "description": "Number of results to return per page.",
+            "in": "query",
+            "required": false,
+            "name": "page_size"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "clusters_phagelist_list"
+      }
+    },
+    "/api/clusters/{cluster}/": {
+      "get": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Cluster Information",
+        "description": "Cluster Information
+
+Get information on all or any Cluster, including its subclusters and phages.",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "",
+            "in": "path",
+            "required": true,
+            "name": "cluster"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "clusters_read"
+      }
+    },
+    "/api/clusters/": {
+      "get": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Cluster Information",
+        "description": "Cluster Information
+
+Get information on all or any Cluster, including its subclusters and phages.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "clusters_list"
+      }
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "host": "phagesdb.org",
+  "info": {
+    "version": "",
+    "description": "",
+    "title": "PhagesDB API"
+  },
+  "swagger": "2.0"
+}

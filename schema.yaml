@@ -1,0 +1,636 @@
+swagger: '2.0'
+info:
+  title: PhagesDB API
+  description: ''
+  version: ''
+host: phagesdb.org
+schemes:
+  - https
+paths:
+  /api/clusters/:
+    get:
+      operationId: clusters_list
+      responses:
+        '200':
+          description: ''
+      parameters: []
+      description: |-
+        Cluster Information
+
+        Get information on all or any Cluster, including its subclusters and phages.
+      summary: Cluster Information
+      tags:
+        - clusters
+  '/api/clusters/{cluster}/':
+    get:
+      operationId: clusters_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: cluster
+          required: true
+          in: path
+          description: ''
+          type: string
+      description: |-
+        Cluster Information
+
+        Get information on all or any Cluster, including its subclusters and phages.
+      summary: Cluster Information
+      tags:
+        - clusters
+  '/api/clusters/{cluster}/phagelist/':
+    get:
+      operationId: clusters_phagelist_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: cluster
+          required: true
+          in: path
+          description: ''
+          type: string
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Phages by Cluster
+
+        Get detailed information about all phages in a given cluster.
+      summary: Phages by Cluster
+      tags:
+        - clusters
+  '/api/genbankupdated/{year}/{month}/{day}/':
+    get:
+      operationId: genbankupdated_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: year
+          required: true
+          in: path
+          description: ''
+          type: string
+        - name: month
+          required: true
+          in: path
+          description: ''
+          type: string
+        - name: day
+          required: true
+          in: path
+          description: ''
+          type: string
+      description: |-
+        Phages by Genbank File update date
+
+        Get detailed information about all phages whose QCed Genbank files have changed since a certain date
+      summary: Phages by Genbank File update date
+      tags:
+        - genbankupdated
+  /api/genes/:
+    get:
+      operationId: genes_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Phamerator Gene Information
+
+        Get information on all or any genes found in Phamerator's Actino_Draft database.
+      summary: Phamerator Gene Information
+      tags:
+        - genes
+  '/api/genes/{GeneID}/':
+    get:
+      operationId: genes_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: GeneID
+          required: true
+          in: path
+          description: A unique value identifying this pham gene.
+          type: string
+      description: |-
+        Phamerator Gene Information
+
+        Get information on all or any genes found in Phamerator's Actino_Draft database.
+      summary: Phamerator Gene Information
+      tags:
+        - genes
+  '/api/genesbyphage/{name}/':
+    get:
+      operationId: genesbyphage_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: name
+          required: true
+          in: path
+          description: ''
+          type: string
+      description: |-
+        Genes from one Phage
+
+        Get all genes from a particular phage.
+      summary: Genes from one Phage
+      tags:
+        - genesbyphage
+  /api/host_genera/:
+    get:
+      operationId: host_genera_list
+      responses:
+        '200':
+          description: ''
+      parameters: []
+      description: |-
+        Host Genus Information
+
+        Get information on all or any host genus.
+      summary: Host Genus Information
+      tags:
+        - host_genera
+  '/api/host_genera/{id}/':
+    get:
+      operationId: host_genera_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: id
+          required: true
+          in: path
+          description: A unique integer value identifying this genus.
+          type: integer
+      description: |-
+        Host Genus Information
+
+        Get information on all or any host genus.
+      summary: Host Genus Information
+      tags:
+        - host_genera
+  '/api/host_genera/{id}/phagelist/':
+    get:
+      operationId: host_genera_phagelist_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: id
+          required: true
+          in: path
+          description: ''
+          type: string
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Phages by Genus
+
+        Get detailed information about all phages in a given genus.
+      summary: Phages by Genus
+      tags:
+        - host_genera
+  /api/host_species/:
+    get:
+      operationId: host_species_list
+      responses:
+        '200':
+          description: ''
+      parameters: []
+      description: |-
+        Host Species Information
+
+        Get information on all or any host species.
+      summary: Host Species Information
+      tags:
+        - host_species
+  '/api/host_species/{id}/':
+    get:
+      operationId: host_species_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: id
+          required: true
+          in: path
+          description: A unique integer value identifying this Host species.
+          type: integer
+      description: |-
+        Host Species Information
+
+        Get information on all or any host species.
+      summary: Host Species Information
+      tags:
+        - host_species
+  '/api/host_species/{id}/phagelist/':
+    get:
+      operationId: host_species_phagelist_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: id
+          required: true
+          in: path
+          description: ''
+          type: string
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Phages by Species
+
+        Get detailed information about all phages in a given species.
+      summary: Phages by Species
+      tags:
+        - host_species
+  /api/host_strains/:
+    get:
+      operationId: host_strains_list
+      responses:
+        '200':
+          description: ''
+      parameters: []
+      description: |-
+        Host Strain Information
+
+        Get information on all or any host strain.
+      summary: Host Strain Information
+      tags:
+        - host_strains
+  '/api/host_strains/{id}/':
+    get:
+      operationId: host_strains_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: id
+          required: true
+          in: path
+          description: A unique integer value identifying this Host strain.
+          type: integer
+      description: |-
+        Host Strain Information
+
+        Get information on all or any host strain.
+      summary: Host Strain Information
+      tags:
+        - host_strains
+  '/api/host_strains/{id}/phagelist/':
+    get:
+      operationId: host_strains_phagelist_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: id
+          required: true
+          in: path
+          description: ''
+          type: string
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Phages by Strain
+
+        Get detailed information about all phages in a given strain.
+      summary: Phages by Strain
+      tags:
+        - host_strains
+  /api/institutions/:
+    get:
+      operationId: institutions_list
+      responses:
+        '200':
+          description: ''
+      parameters: []
+      description: |-
+        Institution Information
+
+        Get basic information on all or any institutions.
+      summary: Institution Information
+      tags:
+        - institutions
+  '/api/institutions/{institution_code}/':
+    get:
+      operationId: institutions_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: institution_code
+          required: true
+          in: path
+          description: A unique value identifying this institution.
+          type: string
+      description: |-
+        Institution Information
+
+        Get basic information on all or any institutions.
+      summary: Institution Information
+      tags:
+        - institutions
+  /api/lytic_phages/:
+    get:
+      operationId: lytic_phages_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Sequenced Lytic Phages
+
+        Get detailed information about phages that have been sequenced and placed in a cluster which generally contains lytic phages (those which cannot form lysogens).
+      summary: Sequenced Lytic Phages
+      tags:
+        - lytic_phages
+  /api/phages/:
+    get:
+      operationId: phages_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Detailed Phage Information
+
+        Access detailed information about all phages, or about a particular phage (given its name).
+      summary: Detailed Phage Information
+      tags:
+        - phages
+  '/api/phages/{phage_name}/':
+    get:
+      operationId: phages_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: phage_name
+          required: true
+          in: path
+          description: ''
+          type: string
+      description: |-
+        Detailed Phage Information
+
+        Access detailed information about all phages, or about a particular phage (given its name).
+      summary: Detailed Phage Information
+      tags:
+        - phages
+  /api/pham_phages/:
+    get:
+      operationId: pham_phages_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Phamerator Phage Information
+
+        Get information on all or any phages found in Phamerator's Actino_Draft database, including their DNA sequence.
+      summary: Phamerator Phage Information
+      tags:
+        - pham_phages
+  '/api/pham_phages/{Name}/':
+    get:
+      operationId: pham_phages_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: Name
+          required: true
+          in: path
+          description: ''
+          type: string
+      description: |-
+        Phamerator Phage Information
+
+        Get information on all or any phages found in Phamerator's Actino_Draft database, including their DNA sequence.
+      summary: Phamerator Phage Information
+      tags:
+        - pham_phages
+  /api/publications/:
+    get:
+      operationId: publications_list
+      responses:
+        '200':
+          description: ''
+      parameters: []
+      tags:
+        - publications
+  '/api/publications/{id}/':
+    get:
+      operationId: publications_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: id
+          required: true
+          in: path
+          description: A unique integer value identifying this publication.
+          type: integer
+      tags:
+        - publications
+  /api/schema/:
+    get:
+      operationId: schema_list
+      responses:
+        '200':
+          description: ''
+      parameters: []
+      tags:
+        - schema
+  /api/sequenced_phages/:
+    get:
+      operationId: sequenced_phages_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Sequenced Phages Only
+
+        Get detailed information about all sequenced phages.
+      summary: Sequenced Phages Only
+      tags:
+        - sequenced_phages
+  /api/subclusters/:
+    get:
+      operationId: subclusters_list
+      responses:
+        '200':
+          description: ''
+      parameters: []
+      description: |-
+        Subcluster Information
+
+        Get information on all or any subluster, including its set of phages.
+      summary: Subcluster Information
+      tags:
+        - subclusters
+  '/api/subclusters/{subcluster}/':
+    get:
+      operationId: subclusters_read
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: subcluster
+          required: true
+          in: path
+          description: ''
+          type: string
+      description: |-
+        Subcluster Information
+
+        Get information on all or any subluster, including its set of phages.
+      summary: Subcluster Information
+      tags:
+        - subclusters
+  '/api/subclusters/{subcluster}/phagelist/':
+    get:
+      operationId: subclusters_phagelist_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: subcluster
+          required: true
+          in: path
+          description: ''
+          type: string
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Phages by Subcluster
+
+        Get detailed information about all phages in a given subcluster.
+      summary: Phages by Subcluster
+      tags:
+        - subclusters
+  /api/temperate_phages/:
+    get:
+      operationId: temperate_phages_list
+      responses:
+        '200':
+          description: ''
+      parameters:
+        - name: page
+          required: false
+          in: query
+          description: A page number within the paginated result set.
+          type: integer
+        - name: page_size
+          required: false
+          in: query
+          description: Number of results to return per page.
+          type: integer
+      description: |-
+        Sequenced Temperate Phages
+
+        Get detailed information about phages that have been sequenced and placed in a cluster which generally contains temperate phages.
+      summary: Sequenced Temperate Phages
+      tags:
+        - temperate_phages
+securityDefinitions:
+  basic:
+    type: basic
