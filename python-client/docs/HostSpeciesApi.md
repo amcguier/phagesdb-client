@@ -1,4 +1,4 @@
-# swagger_client.HostSpeciesApi
+# phagesdb_client.HostSpeciesApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -20,12 +20,12 @@ Host Species Information  Get information on all or any host species.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostSpeciesApi()
+api_instance = phagesdb_client.HostSpeciesApi()
 
 try:
     # Host Species Information
@@ -63,12 +63,12 @@ Phages by Species  Get detailed information about all phages in a given species.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostSpeciesApi()
+api_instance = phagesdb_client.HostSpeciesApi()
 id = 'id_example' # str | 
 page = 56 # int | A page number within the paginated result set. (optional)
 page_size = 56 # int | Number of results to return per page. (optional)
@@ -114,12 +114,12 @@ Host Species Information  Get information on all or any host species.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostSpeciesApi()
+api_instance = phagesdb_client.HostSpeciesApi()
 id = 56 # int | A unique integer value identifying this Host species.
 
 try:

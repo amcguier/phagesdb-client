@@ -1,4 +1,4 @@
-# swagger_client.HostStrainsApi
+# phagesdb_client.HostStrainsApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -20,12 +20,12 @@ Host Strain Information  Get information on all or any host strain.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostStrainsApi()
+api_instance = phagesdb_client.HostStrainsApi()
 
 try:
     # Host Strain Information
@@ -63,12 +63,12 @@ Phages by Strain  Get detailed information about all phages in a given strain.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostStrainsApi()
+api_instance = phagesdb_client.HostStrainsApi()
 id = 'id_example' # str | 
 page = 56 # int | A page number within the paginated result set. (optional)
 page_size = 56 # int | Number of results to return per page. (optional)
@@ -114,12 +114,12 @@ Host Strain Information  Get information on all or any host strain.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostStrainsApi()
+api_instance = phagesdb_client.HostStrainsApi()
 id = 56 # int | A unique integer value identifying this Host strain.
 
 try:

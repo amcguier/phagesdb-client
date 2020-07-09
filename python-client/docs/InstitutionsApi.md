@@ -1,4 +1,4 @@
-# swagger_client.InstitutionsApi
+# phagesdb_client.InstitutionsApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -19,12 +19,12 @@ Institution Information  Get basic information on all or any institutions.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InstitutionsApi()
+api_instance = phagesdb_client.InstitutionsApi()
 
 try:
     # Institution Information
@@ -62,12 +62,12 @@ Institution Information  Get basic information on all or any institutions.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.InstitutionsApi()
+api_instance = phagesdb_client.InstitutionsApi()
 institution_code = 'institution_code_example' # str | A unique value identifying this institution.
 
 try:

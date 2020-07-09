@@ -1,4 +1,4 @@
-# swagger_client.GenbankupdatedApi
+# phagesdb_client.GenbankupdatedApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -18,12 +18,12 @@ Phages by Genbank File update date  Get detailed information about all phages wh
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenbankupdatedApi()
+api_instance = phagesdb_client.GenbankupdatedApi()
 year = 'year_example' # str | 
 month = 'month_example' # str | 
 day = 'day_example' # str | 

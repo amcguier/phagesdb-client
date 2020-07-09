@@ -1,4 +1,4 @@
-# swagger_client.HostGeneraApi
+# phagesdb_client.HostGeneraApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -20,12 +20,12 @@ Host Genus Information  Get information on all or any host genus.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostGeneraApi()
+api_instance = phagesdb_client.HostGeneraApi()
 
 try:
     # Host Genus Information
@@ -63,12 +63,12 @@ Phages by Genus  Get detailed information about all phages in a given genus.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostGeneraApi()
+api_instance = phagesdb_client.HostGeneraApi()
 id = 'id_example' # str | 
 page = 56 # int | A page number within the paginated result set. (optional)
 page_size = 56 # int | Number of results to return per page. (optional)
@@ -114,12 +114,12 @@ Host Genus Information  Get information on all or any host genus.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HostGeneraApi()
+api_instance = phagesdb_client.HostGeneraApi()
 id = 56 # int | A unique integer value identifying this genus.
 
 try:

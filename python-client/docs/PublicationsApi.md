@@ -1,4 +1,4 @@
-# swagger_client.PublicationsApi
+# phagesdb_client.PublicationsApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -17,12 +17,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PublicationsApi()
+api_instance = phagesdb_client.PublicationsApi()
 
 try:
     api_instance.publications_list()
@@ -57,12 +57,12 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PublicationsApi()
+api_instance = phagesdb_client.PublicationsApi()
 id = 56 # int | A unique integer value identifying this publication.
 
 try:

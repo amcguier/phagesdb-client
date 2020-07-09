@@ -1,4 +1,4 @@
-# swagger_client.SchemaApi
+# phagesdb_client.SchemaApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -16,12 +16,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SchemaApi()
+api_instance = phagesdb_client.SchemaApi()
 
 try:
     api_instance.schema_list()

@@ -1,4 +1,4 @@
-# swagger_client.GenesbyphageApi
+# phagesdb_client.GenesbyphageApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -18,12 +18,12 @@ Genes from one Phage  Get all genes from a particular phage.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenesbyphageApi()
+api_instance = phagesdb_client.GenesbyphageApi()
 name = 'name_example' # str | 
 
 try:

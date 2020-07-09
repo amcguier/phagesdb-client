@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.pham_phages_api import PhamPhagesApi  # noqa: E501
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.api.pham_phages_api import PhamPhagesApi  # noqa: E501
+from phagesdb_client.rest import ApiException
 
 
 class TestPhamPhagesApi(unittest.TestCase):
     """PhamPhagesApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.pham_phages_api.PhamPhagesApi()  # noqa: E501
+        self.api = phagesdb_client.api.pham_phages_api.PhamPhagesApi()  # noqa: E501
 
     def tearDown(self):
         pass

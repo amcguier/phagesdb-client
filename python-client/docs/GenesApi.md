@@ -1,4 +1,4 @@
-# swagger_client.GenesApi
+# phagesdb_client.GenesApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -19,12 +19,12 @@ Phamerator Gene Information  Get information on all or any genes found in Phamer
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenesApi()
+api_instance = phagesdb_client.GenesApi()
 page = 56 # int | A page number within the paginated result set. (optional)
 page_size = 56 # int | Number of results to return per page. (optional)
 
@@ -68,12 +68,12 @@ Phamerator Gene Information  Get information on all or any genes found in Phamer
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GenesApi()
+api_instance = phagesdb_client.GenesApi()
 gene_id = 'gene_id_example' # str | A unique value identifying this pham gene.
 
 try:

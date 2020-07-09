@@ -1,4 +1,4 @@
-# swagger_client.PhamPhagesApi
+# phagesdb_client.PhamPhagesApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -19,12 +19,12 @@ Phamerator Phage Information  Get information on all or any phages found in Pham
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PhamPhagesApi()
+api_instance = phagesdb_client.PhamPhagesApi()
 page = 56 # int | A page number within the paginated result set. (optional)
 page_size = 56 # int | Number of results to return per page. (optional)
 
@@ -68,12 +68,12 @@ Phamerator Phage Information  Get information on all or any phages found in Pham
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PhamPhagesApi()
+api_instance = phagesdb_client.PhamPhagesApi()
 name = 'name_example' # str | 
 
 try:

@@ -1,4 +1,4 @@
-# swagger_client.TemperatePhagesApi
+# phagesdb_client.TemperatePhagesApi
 
 All URIs are relative to *https://phagesdb.org*
 
@@ -18,12 +18,12 @@ Sequenced Temperate Phages  Get detailed information about phages that have been
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TemperatePhagesApi()
+api_instance = phagesdb_client.TemperatePhagesApi()
 page = 56 # int | A page number within the paginated result set. (optional)
 page_size = 56 # int | Number of results to return per page. (optional)
 

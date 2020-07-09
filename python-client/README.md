@@ -23,7 +23,7 @@ pip install git+https://github.com//.git
 
 Then import the package:
 ```python
-import swagger_client 
+import phagesdb_client 
 ```
 
 ### Setuptools
@@ -37,7 +37,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import swagger_client
+import phagesdb_client
 ```
 
 ## Getting Started
@@ -47,12 +47,12 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import phagesdb_client
+from phagesdb_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ClustersApi(swagger_client.ApiClient(configuration))
+api_instance = phagesdb_client.ClustersApi(phagesdb_client.ApiClient(configuration))
 
 try:
     # Cluster Information
